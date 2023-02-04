@@ -1,0 +1,14 @@
+<main class="d-flex justify-content-center p-2">
+    <% products.forEach(function(product){ %>
+    <div class="card m-1">
+        <img class="card-img-top w-25" src="<%= product.image %>" alt="">
+        <div class="card-body">
+            <h4 class="card-title"><%= product.pr_name %></h4>
+            <p class="card-text"><%= product.price %></p>
+            <a id="" class="btn btn-primary" href="/addtocart/<%= product.id %>" role="button">
+                Thêm vào giỏ hàng
+            </a>
+        </div>
+    </div>
+    <% }) %>
+</main>
