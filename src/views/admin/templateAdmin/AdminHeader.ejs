@@ -24,17 +24,7 @@
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="text" placeholder="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>      
-            
-                
-                <% if(sessionUser == undefined){%>
-                    <a href="/login" class="btn btn-dark">Đăng nhập</a>
-                    <a href="/register" class="btn btn-light">Đăng ký</a>
-                <%}else{%>
-                    <strong><%= sessionUser.name %> </strong>
-                <%} %>
-                    
-                
+            </form>
         </div>
     </nav>
 </header>
