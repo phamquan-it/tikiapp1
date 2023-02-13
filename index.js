@@ -5,6 +5,7 @@ import path from "path";
 dotenv.config();
 import adminRoutes from "./src/routes/AdminRoutes.js";
 import routes from "./src/routes/route.js"
+
 const app = express()
 //use session
 app.use(session({
@@ -12,6 +13,9 @@ app.use(session({
     saveUninitialized: true, 
     secret: 'somesecret', 
     cookie: { maxAge: 1260000 }}));
+//senmail
+
+
 //use body-parser 
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
@@ -21,6 +25,7 @@ app.set("views","./src/views")
 app.use(express.static(path.join("./","src/public")))
 app.use('/',routes)
 app.use('/admin',adminRoutes)
+
 app.use(function (req,res) {
     res.send("404 not found")
 })

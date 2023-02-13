@@ -1,3 +1,12 @@
 h1{
     color: blue;
 }
+.modal-dialog{
+    max-width: 1000px;
+}
+.w-90{
+    width: 90% !important;
+}
+.w-80{
+    width: 80% !important;
+}
